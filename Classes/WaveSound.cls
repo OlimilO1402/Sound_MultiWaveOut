@@ -15,8 +15,8 @@ Option Explicit
 Private mWaveFormat As TWaveFormat
 Private mWaveData() As Byte
 
-Public Sub NewC(WaveFileName As String)
-    Call Load(WaveFileName)
+Friend Sub New_(WaveFileName As String)
+    Load WaveFileName
 End Sub
 
 Public Function Load(WaveFileName As String) As Boolean

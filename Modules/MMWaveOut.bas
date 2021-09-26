@@ -188,7 +188,7 @@ Public Const WOM_CLOSE    As Long = MM_WOM_CLOSE
 'die Übergabe des WaveFormats ByRef As Any hat den Vorteil
 'daß man sowohl die Variable ByRef als auch einen Zeiger ByVal
 'darauf übergeben kann.
-Public Declare Function waveOutOpen Lib "winmm.dll" ( _
+Public Declare Function waveOutOpen Lib "winmm" ( _
                  ByRef lphWaveOut As Long, _
                  ByVal uDeviceID As Long, _
                  ByRef pwfmtx As Any, _
@@ -197,42 +197,42 @@ Public Declare Function waveOutOpen Lib "winmm.dll" ( _
                  ByVal dwFlags As EWaveOutFlags _
                  ) As EMMResult 'Long
 
-Public Declare Function waveOutClose Lib "winmm.dll" ( _
+Public Declare Function waveOutClose Lib "winmm" ( _
                  ByVal hWaveOut As Long _
                  ) As EMMResult 'Long
 
-Public Declare Function waveOutWrite Lib "winmm.dll" ( _
+Public Declare Function waveOutWrite Lib "winmm" ( _
                  ByVal hWaveOut As Long, _
                  ByRef lpWaveOutHdr As Any, _
                  ByVal uSize As Long _
                  ) As EMMResult 'Long
                  
-Public Declare Function waveOutPrepareHeader Lib "winmm.dll" ( _
+Public Declare Function waveOutPrepareHeader Lib "winmm" ( _
                  ByVal hWaveOut As Long, _
                  ByRef lpWaveOutHdr As Any, _
                  ByVal uSize As Long _
                  ) As EMMResult 'Long
 
-Public Declare Function waveOutUnprepareHeader Lib "winmm.dll" ( _
+Public Declare Function waveOutUnprepareHeader Lib "winmm" ( _
                  ByVal hWaveOut As Long, _
                  ByRef lpWaveOutHdr As Any, _
                  ByVal uSize As Long _
                  ) As EMMResult 'Long
 
-Public Declare Function waveOutGetNumDevs Lib "winmm.dll" ( _
+Public Declare Function waveOutGetNumDevs Lib "winmm" ( _
                  ) As Long
 
 Public Declare Function waveOutPause Lib "winmm.dll" ( _
                  ByVal hWaveOut As Long _
                  ) As Long
 
-Public Declare Function waveOutGetPosition Lib "winmm.dll" ( _
+Public Declare Function waveOutGetPosition Lib "winmm" ( _
                  ByVal hWaveOut As Long, _
                  lpInfo As Any, _
                  ByVal uSize As Long _
                  ) As Long
 
-Public Declare Function waveOutRestart Lib "winmm.dll" ( _
+Public Declare Function waveOutRestart Lib "winmm" ( _
                  ByVal hWaveOut As Long _
                  ) As Long
 

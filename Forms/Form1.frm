@@ -126,10 +126,10 @@ Private Sub Form_Load()
     Set mWavOutChan1 = New WaveOut
     Set mWavOutChan2 = New WaveOut
     Set mWavOutChan3 = New WaveOut
-    Set mWavChimes = New_WaveSound(MediaPath & "chimes.wav")
-    Set mWavChord = New_WaveSound(MediaPath & "chord.wav")
-    Set mWavTada = New_WaveSound(MediaPath & "tada.wav")
-    Set mWavApplause = New_WaveSound(App.Path & "\Resources\Applause.wav")
+    Set mWavChimes = WaveSound(MediaPath & "chimes.wav")
+    Set mWavChord = WaveSound(MediaPath & "chord.wav")
+    Set mWavTada = WaveSound(MediaPath & "tada.wav")
+    Set mWavApplause = WaveSound(App.Path & "\Resources\Applause.wav")
 
 End Sub
 

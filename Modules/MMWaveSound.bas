@@ -85,9 +85,8 @@ Public Function TWaveFormatToString(this As TWaveFormat) As String
     TWaveFormatToString = s
 End Function
 
-Public Function New_WaveSound(WaveFileName As String) As WaveSound
-    Set New_WaveSound = New WaveSound
-    Call New_WaveSound.NewC(WaveFileName)
+Public Function WaveSound(WaveFileName As String) As WaveSound
+    Set WaveSound = New WaveSound: WaveSound.New_ WaveFileName
 End Function
 
 Public Function InStrFile(ByVal FNr As Integer, _
